@@ -1,0 +1,56 @@
+// =============================================================================
+// Media Queries
+// =============================================================================
+$media-breakpoints: (xs: 0, 6s: 414px, sm: 576px, md: 767px, lg: 991px, xl: 1200px, xxl: 1440px, xxxl: 1600px)
+
+@mixin mq($device-w)
+  @if map-has-key($media-breakpoints, $device-w)
+    @media (max-width: #{map-get($media-breakpoints, $device-w)})
+      @content
+  @else
+    @media (max-width: $device-w)
+      @content
+
+@mixin minq($device-w)
+  @if map-has-key($media-breakpoints, $device-w)
+    @media (min-width: #{map-get($media-breakpoints, $device-w)})
+      @content
+  @else
+    @media (min-width: $device-w)
+      @content
+    
+    
+    
+// =============================================================================
+// Font Face
+// =============================================================================
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg)
+  $src: null
+
+  $extmods: ( eot: "?", svg: "#" + str-replace($name, " ", "_") )
+
+  $formats: ( otf: "opentype", ttf: "truetype" )
+  @each $ext in $exts
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext)
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext)
+    $src: append($src, url(quote( $path + "." + $extmod)) format(quote($format)), comma)
+  @font-face
+    font-family: quote($name)
+    font-style: $style
+    font-weight: $weight
+    src: $src
+
+@mixin dynamic-block($content, $w: 100%, $h: 100%)
+	position: relative
+	width: $w
+	&:before 
+		content: ""
+		display: block
+		padding-top: $h
+	
+	#{$content} 
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0

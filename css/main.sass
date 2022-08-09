@@ -1,0 +1,208 @@
+
+
+@import 'mixins'
+// home page
+@import 'sections/home/subscribe'
+@import 'sections/home/consultation'
+@import 'sections/home/services'
+@import 'sections/home/intro'
+@import 'sections/home/about'
+@import 'sections/home/projects'
+@import 'sections/home/products'
+@import 'sections/home/contacts'
+
+// about page
+@import 'sections/about/about-intro'
+@import 'sections/about/about-services'
+
+
+@import 'sections/header'
+@import 'sections/footer'
+@import 'sections/solutions'
+@import 'sections/text-block'
+@import 'sections/solution-intro'
+@import 'sections/project-page'
+@import 'sections/single-product'
+@import 'sections/404'
+@import 'sections/modal'
+
+
+    
+$at_black: #000
+
+@include font-face(gpb, fonts/GothamPro-Bold, null, null, ttf)
+@include font-face(gpl, fonts/GothamPro-Light, null, null, ttf)
+@include font-face(gpm, fonts/GothamPro-Medium, null, null, ttf)
+@include font-face(gp, fonts/GothamPro, null, null, ttf)
+body
+    font-family: gp
+
+    &.hidden-scroll
+        overflow: hidden
+
+    &.home 
+        .header__wrapper
+            border-bottom: 1px solid #fff
+    
+    &.products-page
+        background: #FCFCFC
+    
+
+main 
+    padding-top: 99px
+    +mq(xxl)
+        padding-top: 82px
+    +mq(md)
+        padding-top: 75px
+.breadcrumbs
+    display: flex
+    align-items: center
+    color: rgba(3, 3, 3, 0.5)
+    margin-bottom: 50px
+    flex-wrap: wrap
+    +mq(lg)
+        margin-bottom: 30px
+    +mq(md)
+        display: none
+    span
+        font-family: gpm
+        color: rgba(3, 3, 3, 0.2)
+        font-size: 16px
+        line-height: 140%
+        margin: 0 11px
+        +mq(md)
+            font-size: 12px
+
+        &:nth-child(1)
+            margin-left: 0
+            
+        a
+            color: rgba(3, 3, 3, 0.5)
+            &:hover
+                text-decoration: none
+.s-title
+    text-align: center
+    font-family: gpb
+    font-size: 36px
+    line-height: 34px
+    text-transform: uppercase
+    color: $at_black
+    +mq(lg)
+        font-size: 30px
+    +mq(md)
+        font-size: 20px
+        line-height: 24px
+
+img
+    max-width: 100% 
+    
+// .container
+//     +minq(xl)
+//         max-width: 1510px 
+//     +mq(xl)
+//         max-width: 100%
+.container
+    padding-right: 20px
+    padding-left: 20px
+    +minq(1505px)
+        max-width: 1505px
+
+    // +minq(1555px)
+    //     max-width: 1485px
+
+
+    +mq(xl)
+        // max-width: 100%
+    +mq(lg)
+        padding-right: 20px
+        padding-left: 20px
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto
+    padding-right: 10px
+    padding-left: 10px
+.row
+    margin-right: -10px
+    margin-left: -10px
+
+.btn
+    font-size: 16px
+    line-height: 15px
+    font-family: gpb
+    padding: 19px
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    border-radius: 0
+    box-shadow: none
+    text-decoration: none
+    box-sizing: border-box
+    transition: 0.3s
+    min-width: 230px 
+    &:focus
+        outline: none
+        box-shadow: none
+    +mq(xxl)
+        font-size: 15px
+        padding: 15px
+    +mq(xl)
+        font-size: 14px
+
+    &_black
+        border: 1px solid #fff
+        background: #000
+        color: #fff
+        &:hover
+            background: #fff 
+            color: #000 
+    &_white
+        background: #fff
+        color: #000
+    &_bord
+        border: 1px solid #000
+    &_white_b
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            top: 0
+            border: 1px solid #fff
+            transition: 0.3s
+
+        &:hover
+            transform: translate(10px, 10px)
+            &::after
+                transform: translate(-10px, -10px)
+
+    &_black_b
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            top: 0
+            border: 1px solid #000000
+            transition: 0.3s
+        &:hover
+            transform: translate(10px, 10px)
+            background: #000
+            color: #fff
+            &::after
+                transform: translate(-10px, -10px)
+
+.thanks-page
+    background: #000
+    position: fixed
+    top: 99px
+    left: 0
+    right: 0
+    bottom: 0
+    display: flex
+    align-items: center
+    +mq(xxl)
+        top: 82px
+    +mq(lg)
+        top: 75px

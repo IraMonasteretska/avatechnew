@@ -1,0 +1,503 @@
+.header
+    height: 100%
+    display: flex
+    align-items: center
+    z-index: 10
+    &_row
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__wrapper
+        padding: 17px 0
+        background: #000
+        position: fixed
+        left: 0
+        top: 0
+        right: 0
+        z-index: 10
+        height: 99px
+        +mq(xxl)
+            height: 82px
+        +mq(md)
+            height: 75px
+        
+        &.fixed
+            .header__logo
+              
+            .logo-big
+                opacity: 1
+                visibility: visible
+                transform: translateY(0px)
+            .logo-small
+                transform: translateY(0px)
+
+    .row
+        align-items: center
+
+    
+    &__logo 
+        max-width: 105px
+
+        text-align: center
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        // min-width: 105px
+        transition: .3s
+        // transform: translateY(-20px)
+        +mq(xl)
+            max-width: 85px
+        +mq(md)
+            min-width: auto
+        img 
+            +mq(md)
+                min-width: 38px
+
+        .logo-big
+            transform: translateY(-22px)
+            // display: none
+            transition: .3s
+            opacity: 0
+            visibility: hidden
+            +mq(xxl)
+                width: 32px
+                transform: translateY(-20px)
+
+            +mq(md)
+                display: inline-block
+                opacity: 1
+                transform: translateY(0)
+                visibility: visible
+        .logo-small
+            width: 105px
+            max-width: 105px
+            transition: .3s
+            transform: translateY(-22px)
+            +mq(xxl)
+                transform: translateY(-20px)
+            +mq(xl)
+                width: 85px
+
+            +mq(md)
+                display: none
+                opacity: 0
+                visibility: hidden
+
+    &__menu
+        // height: 100%
+        // padding-left: 40px
+        // padding-right: 23px
+        +mq(lg)
+            padding: 0
+        +mq(xxl)
+            padding-right: 0
+        &-wrap
+        
+            +mq(lg)
+                position: fixed
+                min-height: calc( 100vh - 82px ) 
+                left: 0
+                bottom: 0
+                right: 0
+                top: 82px
+                flex: 0 0 100%
+                max-width: 100%
+                background: #000
+                overflow: scroll
+                overflow-x: auto
+                transform: translateX(100%)
+                transition: 1s
+                padding: 0 20px
+                &.active
+                    transform: translateX(0%)
+
+            +mq(md)
+                min-height: calc( 100vh - 75px )
+                top: 75px
+                padding: 0 10px
+
+        ul
+            display: flex
+            align-items: center
+            justify-content: space-around
+            list-style: none
+            padding: 0
+            margin: 0
+            height: 100%
+
+            +mq(lg)
+                flex-direction: column
+                align-items: flex-start
+                padding-top: 70px
+                margin-bottom: 60px
+
+            li 
+                position: relative
+                padding: 0 25px
+                display: flex
+                +mq(1485px)
+                    padding: 0 10px
+                +mq(xl)
+                    padding: 0 10px
+
+                +mq(lg)
+                    margin-bottom: 30px
+                    padding: 0 10px
+                a 
+                    color: #fff
+                    position: relative
+                    white-space: nowrap
+                    +mq(xxl)
+                        font-size: 14px
+                    +mq(xl)
+                        font-size: 13px
+                    +mq(lg)
+                        font-size: 18px
+                        font-family: gpm
+                    
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 0
+                        height: 1px
+                        display: block
+                        right: 0
+                        bottom: -6px
+                        background: #fff
+                        transition: width .3s ease
+                        -webkit-transition: width .3s ease
+                       
+                        +mq(xl)
+                            bottom: -3px
+                    &:hover
+                        &::after
+                            width: 100%
+                            left: 0
+                            background: #ffffff
+                &.current-menu-item 
+                    
+                    a 
+                        color: #fff
+                        &::after
+                            width: 100%
+                            left: 0
+                            background: #ffffff
+                a 
+                    transition: 0.3s
+                    text-decoration: none
+                    color: rgba(255, 255, 255, 0.7)
+    &__contacts
+        display: flex
+        align-items: center
+        justify-content: space-between
+        height: 100%
+        padding-left: 60px
+       
+        +mq(xl)
+            padding-left: 30px
+        +mq(lg)
+            padding-left: 0
+            justify-content: center
+            padding-right: 17%
+
+    .burger-menu
+        display: none
+        +mq(lg)
+            display: block
+            // position: absolute
+            // right: 10px
+            // top: 0
+
+        .burger-menu_close
+            display: none
+        
+        &.active
+            .burger-menu_close
+                display: inline-block
+            .burger-menu_open
+                display: none
+
+
+    &__phone
+        color: #fff
+        font-family: gpb
+        cursor: pointer
+        img 
+            animation: phone-animate 2s  infinite ease-in-out
+            margin-left: 5px
+            // transform-origin: 20% 4px
+        +mq(xxl)
+            font-size: 14px
+        +mq(xl)
+            font-size: 13px
+    &__soc
+        display: flex
+        +mq(lg)
+            display: none
+        a
+            margin: 0 8px
+            +mq(xl)
+                margin: 0 4px
+
+            img
+                display: flex
+                justify-content: center
+                opacity: 0.7
+                transition: 0.3s
+                +mq(xl)
+                    max-width: 22px
+                &:hover
+                    opacity: 1
+    
+        &_mob
+            display: none
+            +mq(lg)
+                padding-left: 10px
+                display: flex
+                margin-bottom: 58px
+            a 
+                margin-right: 17px
+                img
+                    display: flex
+                    justify-content: center
+                    opacity: 0.7
+                    transition: 0.3s
+                    &:hover
+                        opacity: 1
+    &__lang 
+        +mq(lg)
+            display: none
+        ul
+            display: flex
+            list-style: none
+            padding: 0
+            margin: 0
+
+            li 
+                margin-left: 10px
+                position: relative
+                +mq(xl)
+                    margin-left: 7px
+                &::after
+                    content: ""
+                    position: absolute
+                    width: 0
+                    height: 1px
+                    display: block
+                    right: 0
+                    bottom: -6px
+                    background: #fff
+                    transition: width .3s ease
+                    -webkit-transition: width .3s ease
+                    +mq(xl)
+                        bottom: -3px
+                &:hover
+                    &::after
+                        width: 100%
+                        left: 0
+                        background: #ffffff
+                    a 
+                        color: #fff
+                &.current-lang
+                    &::after
+                        width: 100%
+                        left: 0
+                        background: #ffffff
+                    a 
+                        color: #fff
+                a 
+                    transition: .3s 
+                    text-decoration: none
+                    color: rgba(255, 255, 255, 0.7)
+                    +mq(xxl)
+                        font-size: 13px
+                    +mq(xl)
+                        font-size: 12px
+        &_mob
+            padding-bottom: 60px
+            display: none
+            +mq(lg)
+                display: block
+            ul
+                display: flex
+                list-style: none
+                padding: 0
+                margin: 0
+                li 
+                    margin-left: 10px
+                    position: relative
+                    &::after
+                        content: ""
+                        position: absolute
+                        width: 0
+                        height: 1px
+                        display: block
+                        right: 0
+                        bottom: -6px
+                        background: #fff
+                        transition: width .3s ease
+                        -webkit-transition: width .3s ease
+                    &:hover
+                        &::after
+                            width: 100%
+                            left: 0
+                            background: #ffffff
+                        a 
+                            color: #fff
+                    &.current-lang
+                        &::after
+                            width: 100%
+                            left: 0
+                            background: #ffffff
+                        a 
+                            color: #fff
+                    a 
+                        transition: .3s 
+                        text-decoration: none
+                        color: rgba(255, 255, 255, 0.7)
+            
+
+
+@keyframes phone-animate
+    0% 
+        transform: rotate(0) 
+    
+    10% 
+        transform: rotate(-15deg)
+    
+    20% 
+        transform: rotate(15deg) 
+    30% 
+        transform: rotate(-15deg)
+    
+    40% 
+        transform: rotate(15deg) 
+    
+    50% 
+        transform: rotate(0) 
+    
+    100% 
+        transform: rotate(0)
+    
+
+
+@keyframes ring 
+    0% 
+        -webkit-transform: rotate(0)
+        transform: rotate(0)
+
+
+    1% 
+        -webkit-transform: rotate(30deg)
+        transform: rotate(30deg)
+
+
+    3% 
+        -webkit-transform: rotate(-28deg)
+        transform: rotate(-28deg)
+
+
+    5% 
+        -webkit-transform: rotate(34deg)
+        transform: rotate(34deg)
+
+
+    7% 
+        -webkit-transform: rotate(-32deg)
+        transform: rotate(-32deg)
+
+
+    9% 
+        -webkit-transform: rotate(30deg)
+        transform: rotate(30deg)
+
+
+    11% 
+        -webkit-transform: rotate(-28deg)
+        transform: rotate(-28deg)
+
+
+    13% 
+        -webkit-transform: rotate(26deg)
+        transform: rotate(26deg)
+
+
+    15% 
+        -webkit-transform: rotate(-24deg)
+        transform: rotate(-24deg)
+
+
+    17% 
+        -webkit-transform: rotate(22deg)
+        transform: rotate(22deg)
+
+
+    19% 
+        -webkit-transform: rotate(-20deg)
+        transform: rotate(-20deg)
+
+
+    21% 
+        -webkit-transform: rotate(18deg)
+        transform: rotate(18deg)
+
+
+    23% 
+        -webkit-transform: rotate(-16deg)
+        transform: rotate(-16deg)
+
+
+    25% 
+        -webkit-transform: rotate(14deg)
+        transform: rotate(14deg)
+
+
+    27% 
+        -webkit-transform: rotate(-12deg)
+        transform: rotate(-12deg)
+
+
+    29% 
+        -webkit-transform: rotate(10deg)
+        transform: rotate(10deg)
+
+
+    31% 
+        -webkit-transform: rotate(-8deg)
+        transform: rotate(-8deg)
+
+
+    33% 
+        -webkit-transform: rotate(6deg)
+        transform: rotate(6deg)
+
+
+    35% 
+        -webkit-transform: rotate(-4deg)
+        transform: rotate(-4deg)
+
+
+    37% 
+        -webkit-transform: rotate(2deg)
+        transform: rotate(2deg)
+
+
+    39% 
+        -webkit-transform: rotate(-1deg)
+        transform: rotate(-1deg)
+
+
+    41% 
+        -webkit-transform: rotate(1deg)
+        transform: rotate(1deg)
+
+
+    43% 
+        -webkit-transform: rotate(0)
+        transform: rotate(0)
+
+
+    100% 
+        -webkit-transform: rotate(0)
+        transform: rotate(0)
+

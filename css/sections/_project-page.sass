@@ -1,0 +1,339 @@
+.project-intro
+    margin-bottom: 50px
+    position: relative
+    +mq(md)
+        overflow: hidden
+        margin-bottom: 50px
+    +mq(sm)
+        // margin: 0 -20px 50px -20px
+    .solution-intro__slider
+        +mq(sm)
+            margin: 0 -20px 0 -20px
+    .solution-intro-slide
+        img
+            height: 675px
+            object-fit: cover
+            width: 100%
+            +mq(xxxl)
+                height: 625px
+            +mq(1485px)
+                height: 505px
+            +mq(xl)
+                height: 465px
+            +mq(lg)
+                height: 370px
+            +mq(md)
+                height: 320px
+            +mq(sm)
+                height: 255px
+
+    .solution-slider-prev
+        left: 40px
+        +mq(md)
+            left: 20px
+    .solution-slider-next
+        right: 40px
+        +mq(md)
+            right: 20px
+
+
+
+.single-project
+    margin-bottom: 20px
+    &__head
+        border-bottom: 1px solid #000
+        margin-bottom: 50px
+        padding-bottom: 45px
+        display: flex
+        justify-content: space-between
+        +mq(md)
+            flex-direction: column
+            padding-bottom: 20px
+            margin-bottom: 45px
+    &__title 
+        h1 
+            font-family: gpb
+            font-size: 64px
+            line-height: 78px
+            margin-bottom: 14px
+            +mq(md)
+                font-size: 24px
+                line-height: 35px
+                margin-bottom: 9px
+    &__subtitle
+        font-family: gpm 
+        +mq(md)
+            font-size: 14px
+            margin-bottom: 15px
+    &__address
+        text-align: right
+        +mq(md)
+            text-align: left
+            font-size: 14px
+            br 
+                display: none
+    &__desc
+        display: flex
+        flex-wrap: wrap
+
+        .pr-desc-item
+            width: 50%
+            padding-right: 20px
+            margin-bottom: 50px
+            counter-increment: index
+            position: relative
+            min-height: 190px
+            padding-top: 10px
+            +mq(xxl)
+                padding: 0 15px
+            +mq(md)
+                padding: 0
+                margin-bottom: 25px
+            +mq(sm)
+                width: 100%
+
+
+            &::after
+                content: counter(index)
+                font-size: 260px
+                line-height: 185px
+                font-family: gpb
+                color: #e6e6e6
+                position: absolute
+                top: 0
+                left: -72px
+                z-index: -1
+                +mq(1640px)
+                    left: -12px
+                +mq(1504px)
+                    left: -50px
+                +mq(1240px)
+                    left: -12px
+                +mq(md)
+                    left: auto
+                    right: 0
+                    
+            &:nth-child(2)
+                padding-left: 40px
+                padding-right: 0
+                &::after
+                    left: -5px
+                    +mq(md)
+                        left: auto
+                        right: 0
+
+            &:nth-child(4)
+                padding-left: 40px
+                padding-right: 0
+
+                &::after
+                    left: -5px
+                    +mq(md)
+                        left: auto
+                        right: 0
+                    
+                
+            &__title
+                font-family: gpm
+                font-size: 20px
+                padding-bottom: 11px
+                position: relative
+                margin-bottom: 12px
+                +mq(xxl)
+                    font-size: 18px
+
+                &::after
+                    content: ''
+                    height: 1px
+                    width: 200px
+                    background: #000
+                    position: absolute
+                    bottom: 0
+                    left: 0
+            
+            &__list 
+                ul 
+                    padding: 0
+                    padding-left: 20px
+                    margin: 0
+                    li 
+                        font-size: 15px
+                        line-height: 145%
+
+    &__right
+        display: flex
+        +mq(lg)
+            display: none
+    &__img
+        width: 66%
+        text-align: right
+        padding: 0 20px
+        +mq(xl)
+            display: none
+    &__slider
+        width: 33%
+        +mq(xl)
+            width: 100%
+        &-wrap
+            position: relative
+        .slick-arrow
+            position: absolute
+        .used-products-prev 
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            cursor: pointer
+            top: -40px
+
+        .used-products-next
+            position: absolute
+            left: 50%
+            transform: translateX(-50%)
+            cursor: pointer
+
+        .used-products
+            &-title
+                text-align: center
+                font-family: gpm
+                font-size: 16px
+                line-height: 145%
+                max-width: 122px
+                margin: 0 auto 70px auto
+                position: relative
+                padding-bottom: 17px
+                &::after
+                    content: ''
+                    height: 1px
+                    width: 86px
+                    background: #000
+                    position: absolute
+                    bottom: 0
+                    left: 50%
+                    transform: translateX(-50%)
+        
+        .used-product
+            // border: 1px solid #000
+            margin-bottom: 20px
+            &__img 
+                text-align: center
+                img
+                    max-height: 150px
+                    object-fit: cover
+            &__name 
+                text-align: center
+                color: #000
+                font-family: gpb
+                font-size: 14px
+                line-height: 145%
+                margin-bottom: 8px
+                padding: 6px
+                transition: 0.2s
+            &:hover
+                text-decoration: none
+                .used-product__name
+                    background: #000
+                    color: #fff
+
+
+.cons
+    background: #000
+    padding: 72px 0 72px 80px
+    position: relative
+    overflow: hidden
+    +mq(xl)
+        padding: 72px 0 72px 40px
+    +mq(lg)
+        padding: 250px 40px 72px 40px
+    +mq(md)
+        padding: 250px 0px 60px 0px
+        margin-right: -20px
+    .row
+        +mq(md)
+            width: 100%
+    &__wrapper
+        margin-bottom: 100px
+        +mq(md)
+            margin-bottom: 50px
+            background: #000
+    .col-lg-5
+        position: static
+
+    &__title
+        color: #fff
+        font-size: 28px
+        line-height: 145%
+        font-family: gpl
+        position: relative
+        z-index: 2
+        max-width: 475px
+        margin-bottom: 6px
+        +mq(lg)
+            font-size: 18px
+            text-align: center
+            max-width: 100%
+        span 
+            font-family: gpb
+    &__form
+        position: relative
+        z-index: 2
+        &-container
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            +mq(lg)
+                flex-wrap: wrap
+        &-inputs
+            display: flex
+            flex-direction: column
+            width: calc( 50% - 10px )
+            padding-right: 30px
+            +mq(lg)
+                width: 100%
+                padding-right: 0
+                margin-bottom: 60px
+
+            input
+                padding: 10px
+                background: none
+                margin-bottom: 20px
+                border: none
+                box-shadow: none
+                outline: none
+                border-bottom: 1px solid rgba(255, 255, 255, 0.7)
+        
+        &-btn
+            width: calc( 50% - 10px )
+            display: flex
+            justify-content: flex-end
+            margin-bottom: 25px
+            position: relative
+            padding-left: 10px
+            +mq(lg)
+                width: 100%
+                justify-content: center
+                padding-left: 0
+
+            .btn 
+                width: 100%
+
+    &__img
+        position: absolute
+        top: 0px
+        right: -16px
+        z-index: 1
+        +mq(1485px)
+            right: -100px
+        +mq(xl)
+            top: -60px
+            right: -160px
+        +mq(lg)
+            top: 0
+            left: 50%
+            transform: translateX(-50%)
+            text-align: center
+
+        img 
+            width: 100%
+            +mq(lg)
+                max-width: 380px
+        

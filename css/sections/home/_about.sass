@@ -1,0 +1,204 @@
+.about
+    margin-bottom: 127px
+    // display: none
+    +mq(lg)
+        margin-bottom: 50px
+    &__title
+        margin-bottom: 100px
+        +mq(lg)
+            margin-bottom: 50px
+
+    &__text
+        padding-left: 40px
+        font-size: 15px
+        line-height: 145%
+        margin-bottom: 40px
+        +mq(1500px)
+            padding-left: 0
+        p 
+            padding-bottom: 40px
+            margin: 0
+            border-bottom: 1px solid #000
+            +mq(md)
+                font-size: 14px
+                border: none
+            +mq(lg)
+                border: none
+                margin-bottom: 50px
+
+
+    &__video
+        position: relative
+        cursor: pointer
+        video
+            max-width: 100%
+        +mq(lg)
+            display: flex
+            justify-content: center
+            margin-bottom: 50px
+
+        &-play
+            position: absolute
+            top: 50%
+            left: 50%
+            display: flex
+            align-items: center
+            justify-content: center
+            transform: translate(-50%, -50%)
+            width: 85px
+            height: 85px
+            background: rgba(0, 0, 0, 0.6)
+
+    &__statistics
+        padding-left: 40px
+        display: flex
+        justify-content: space-between
+        +mq(1500px)
+            padding-left: 0
+        +mq(md)
+            flex-wrap: wrap
+
+        .statistics-item
+            flex-grow: 1
+            padding: 0 15px
+            text-align: center
+            +mq(xl)
+                padding: 0 10px
+                
+            +mq(lg)
+                max-width: 25%
+                padding: 0 25px
+            
+            +mq(md)
+                width: 50%
+                max-width: 100%
+                margin-bottom: 44px
+            &:nth-child(1)
+                min-width: 110px
+
+            &__numb
+                font-family: gpm
+                font-size: 72px
+                line-height: 69px
+                margin-bottom: 14px
+                +mq(xxxl)
+                    font-size: 64px
+                +mq(1500px)
+                    font-size: 50px
+                    line-height: 60px
+                +mq(xl)
+                    font-size: 44px
+                    line-height: 50px
+                +mq(lg)
+                    font-size: 60px
+                +mq(md)
+                    font-size: 48px
+                    line-height: 46px
+                    margin-bottom: 0px
+
+
+            &__text
+                font-size: 15px
+                line-height: 145%
+                +mq(1500px)
+                    font-size: 14px
+                    line-height: 115%
+
+    &__items
+        margin-top: 130px
+        position: relative
+        padding: 27px 0
+        +mq(md)
+            padding: 40px 0
+            margin-top: 5px
+
+        &::after
+            content: ''
+            display: block
+            width: 50%
+            height: 100%
+            position: absolute
+            background: #000
+            top: 0
+            right: 0
+            z-index: -1
+
+            +mq(lg)
+                background: #fff
+            +mq(md)
+                background: #000
+                width: auto
+                right: -20px
+                left: -20px
+        .about-item
+            text-align: center
+            padding: 0 15px
+            +mq(lg)
+                margin-bottom: 40px
+
+            &__icon
+                margin-bottom: 36px
+                position: relative
+                +mq(lg)
+                    margin-bottom: 25px
+
+                path 
+                    +mq(lg)
+                        fill: #000
+                    +mq(md)
+                        fill: #fff
+         
+                span
+                    content: ''
+                    height: 1px
+                    width: 20px
+                    background: #000
+                    position: absolute
+                    bottom: -20px
+                    left: calc(50% - 10px) 
+                    +mq(lg)
+                        bottom: -15px
+                        background: #000 !important
+                    +mq(md)
+                        background: #fff !important
+
+            &__text
+                font-size: 15px
+                max-width: 145px 
+                margin: 0 auto
+                +mq(xl)
+                    font-size: 14px
+                +mq(lg)
+                    color: #000
+                +mq(md)
+                    color: #fff
+
+        .row
+            &>div
+                &:nth-child(4)
+                    .about-item
+                        color: #fff
+                        &__icon
+                            span
+                                background: #fff
+                &:nth-child(5)
+                    .about-item
+                        color: #fff
+                        &__icon
+                            span
+                                background: #fff
+                &:nth-child(6)
+                    .about-item
+                        color: #fff
+
+                        &__icon
+                            span
+                                background: #fff
+
+[data-aos='fr']
+    transform: translate3d(-10px,0,0)
+    transition: transform 1.5s cubic-bezier(.4,0,0,1), opacity 1.5s cubic-bezier(.4,0,0,1)
+    opacity: 0
+    &.aos-animate
+        transform: translate3d(0,0,0)
+        opacity: 1

@@ -1,0 +1,205 @@
+/* FIND a Store */
+
+.findstore-section
+    margin-bottom: 100px
+    +mq(md)
+        margin-bottom: 50px
+    &__title
+        margin-bottom: 100px 
+        +mq(md)
+            margin-bottom: 50px
+
+.findstore__filter 
+    padding-right: 60px
+    +mq(xl)
+        padding-right: 0 
+
+
+.findstore__mapsect 
+  
+
+.findstore__filter .select-wrapper 
+    width: 100%
+    margin: 0
+  
+
+
+.findstore__search 
+    margin-bottom: 50px
+    +mq(xxl)
+        margin-bottom: 40px
+    +mq(sm)
+        margin-bottom: 30px
+
+
+.findfiltsect 
+    margin-bottom: 31px
+
+
+.findstore__shops-wrap 
+    padding: 35px 32px
+    background: #F8F8F8
+    overflow: auto
+    max-height: 100%
+    +mq(xl)
+        padding: 25px 20px
+    +mq(sm)
+        padding: 15px
+
+.findstore__shop 
+    // padding-bottom: 26px
+    padding-top: 29px
+    border-bottom: 1px solid #9E9E9E
+    cursor: pointer
+
+
+.findstore__shop:first-child 
+    // padding-top: 0
+
+
+.findstore__shop:last-child 
+    border-bottom: none
+
+
+.findstore__shop .title 
+    font-family: gpb
+    font-size: 18px
+    line-height: 17px
+    margin-bottom: 15px
+   
+
+.findstore__shop ul 
+    list-style-type: none
+    padding: 0
+    margin: 0
+    margin-bottom: 35px
+    max-width: 200px
+    +mq(xxl)
+        max-width: 100%
+
+.findstore__shop ul li 
+    margin-bottom: 10px
+    position: relative
+    font-size: 16px
+    word-break: break-all
+.findstore__shop ul li:last-child 
+    margin-bottom: 0
+
+
+.findstore__shops 
+    overflow: hidden
+    height: 605px
+    position: relative
+    +mq(xxl)
+        height: 555px
+        margin-bottom: 30px
+    +mq(md)
+        height: 415px
+        margin-bottom: 30px
+
+    &::after
+        // content: ''
+        position: absolute
+        bottom: 0
+        left: 0
+        right: 0
+        height: 100px
+        background: linear-gradient(360deg, #FFFFFF 50%, rgba(255, 255, 255, 0.479) 100%)
+
+.findstore__shops-wrap::-webkit-scrollbar 
+    width: 7px
+
+
+.findstore__shops-wrap::-webkit-scrollbar-track 
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.05)
+    background: #F3F3F3
+    box-sizing: content-box
+
+
+.findstore__shops-wrap::-webkit-scrollbar-thumb 
+    background-color: #DFDFDF
+    border-radius: 10px
+    -webkit-border-radius: 10px
+    -moz-border-radius: 10px
+    -ms-border-radius: 10px
+    -o-border-radius: 10px
+    border: 2px solid #F3F3F3
+    border-right-width: 0
+
+
+.map-wrapper 
+    height: 710px
+    overflow: hidden
+    +mq(xxl)
+        height: 650px
+    +mq(sm)
+        height: 500px
+
+.map-wrapper #map 
+    height: 100%
+
+.cluster,
+.cluster * 
+    outline: none
+
+
+.findstore__mapsect ul 
+    list-style-type: none
+    padding: 0
+    margin: 0
+    margin-bottom: 25px
+    
+
+.findstore__mapsect ul li 
+    font-size: 14px
+    margin-bottom: 5px
+    
+
+.findstore__mapsect ul li:last-child 
+    margin-bottom: 0
+
+.findstore__mapsect .gm-style-iw.gm-style-iw-c 
+    width: 320px
+    padding: 24px 30px !important
+    +mq(1024px)
+        width: 280px
+        padding: 15px 10px 10px 15px !important
+
+.findstore__mapsect .title 
+    font-family: gpb
+    font-size: 16px
+    line-height: 17px
+    margin-bottom: 10px
+
+.findstore__mapsect .gm-style .gm-style-iw-d 
+    padding: 0 !important
+
+
+.findstore__mapsect .gm-style-iw button img 
+    margin: 0 !important
+    width: 22px !important
+    height: 22px !important
+
+
+.findstore__mapsect .gm-style-iw button 
+    right: 0 !important
+    top: 0 !important
+    outline: none !important
+
+
+.no-items 
+    padding-top: 30px
+    font-size: 20px
+
+
+.findstore__shops-wrap 
+    padding-top: 0 !important
+
+.cluster
+    span 
+        line-height: 42px !important
+    &>div
+        line-height: 42px !important
+
+.breadcrumbs-wrapper
+    padding-top: 50px

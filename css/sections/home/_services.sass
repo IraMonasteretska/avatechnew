@@ -1,0 +1,208 @@
+
+
+.services
+    margin-bottom: 100px
+    +mq(lg)
+        margin-bottom: 50px
+    &__title
+        margin-bottom: 100px
+        +mq(lg)
+            margin-bottom: 50px
+    &__items
+        padding-top: 56px
+        padding-bottom: 40px
+        background: #000
+        +mq(md)
+            padding-top: 25px
+.accordeon 
+    width: 100%
+    height: 100%
+    display: flex
+    +mq(lg)
+        flex-wrap: wrap
+        flex-direction: column
+
+    &-item
+        position: relative
+        display: flex
+        width: 75px
+        // height: 100%
+        color: #fff
+        overflow: hidden
+        cursor: pointer
+        transition: 0.5s ease-out
+        +mq(lg)
+            width: 100%
+            flex-direction: column
+
+        &:hover
+            .prev__title,
+            .prev__numb
+                color: #fff
+        
+        &.active
+            flex-grow: 10
+            +mq(lg)
+                flex-grow: inherit
+            .accordeon-item__prev
+                border-right: 2px solid rgb(255, 255, 255)
+                +mq(lg)
+                    border-right: none
+                    border-bottom: 2px solid rgb(255, 255, 255)
+            .accordeon-item__content
+                +mq(md)
+                    // display: block
+
+
+        &__prev
+            position: relative
+            text-align: center
+            background: #000
+            z-index: 2
+            min-width: 75px
+            border-right: 2px solid rgba(255, 255, 255, 0.5)
+            +mq(lg)
+                border-right: none
+                border-bottom: 2px solid rgb(255, 255, 255)
+                display: flex
+                flex-direction: row-reverse
+                justify-content: space-between
+                padding: 25px 0
+
+            .prev__numb
+                font-family: gpb
+                font-size: 24px
+                display: block
+                line-height: 145%
+                color: rgba(255, 255, 255, 0.5)
+                transition: 0.3s
+                +mq(md)
+                    font-size: 18px
+                +mq(370px)
+                    font-size: 15px
+
+            .prev__title
+                font-size: 24px
+                line-height: 145%
+                position: absolute
+                top: 100%
+                left: 50%
+                white-space: nowrap
+                display: block
+                writing-mode: vertical-rl
+                transform: translate(-50%, -100%) rotate(180deg)
+                color: rgba(255, 255, 255, 0.5)
+                transition: color 0.3s
+                background: #000
+                z-index: 2
+                +mq(xxl)
+                    font-size: 20px
+                +mq(lg)
+                    transform: rotate(0)
+                    position: static
+                    writing-mode: inherit
+                    font-size: 18px
+                +mq(370px)
+                    font-size: 15px
+                span
+                    display: block
+                    
+           
+            
+        &__title
+            font-family: gpb
+            font-size: 24px
+            line-height: 145%
+            color: #FFFFFF
+            margin-bottom: 38px
+            position: relative
+            padding-left: 62px
+            +mq(xl)
+                font-size: 20px
+            +mq(lg)
+                font-size: 18px
+                margin: 30px 0
+                display: none
+
+
+            &::after
+                content: ''
+                height: 1px
+                width: 40px
+                background: #fff
+                position: absolute
+                top: 50%
+                left: 0
+        &__text
+            font-size: 15px
+            max-width: 395px
+            min-width: 395px
+            line-height: 145%
+            color: #FFFFFF
+            +mq(1024px)
+                max-width: 345px
+                min-width: 345px
+            +mq(xl)
+                max-width: 300px
+                min-width: 300px
+            +mq(lg)
+                max-width: none
+                min-width: auto
+                padding-top: 20px
+           
+        &__content
+            display: flex
+            transition: 0.5s
+            align-items: center
+            justify-content: flex-end
+            width: 100%
+            padding-right: 15px
+            background-image: url(../img/servbg.png)
+            background-repeat: no-repeat
+            background-position: center center
+            +mq(1505px)
+                justify-content: flex-start
+                padding-left: 15px
+            +mq(lg)
+                display: none
+                transition: auto
+                padding: 0
+
+            img
+                +mq(1505px)
+                    // min-width: 549px
+                    // min-height: 530px
+                    min-width: 490px
+                    min-height: 440px
+                +mq(xl)
+                    min-width: 449px
+                    min-height: 430px
+                +mq(1024px)
+                    min-width: 400px
+                    min-height: 390px
+                +mq(lg)
+                    min-width: auto
+                    min-height: auto
+           
+        &-text
+            padding-right: 100px
+            +mq(1505px)
+                padding-right: 50px
+            +mq(lg)
+                padding-right: 0
+                margin-bottom: 30px
+        &-img
+            // width: 50%
+
+
+.accordeon .link.active .accordeon-item__prev 
+    // opacity: 0
+    .prev__numb
+        color: #fff
+    .prev__title
+        color: #fff
+
+.accordeon .link:not(.active) .full_content 
+    opacity: 0
+    +mq(lg)
+        opacity: 1

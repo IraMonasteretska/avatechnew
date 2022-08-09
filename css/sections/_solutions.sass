@@ -1,0 +1,101 @@
+.solutions
+    margin-bottom: 100px
+    +mq(md)
+        margin-bottom: 50px
+    &__more
+        display: flex
+        justify-content: center
+        .solutions_more-btn
+            display: flex
+            flex-direction: column
+            align-items: center
+            cursor: pointer
+            svg
+                margin-top: 20px
+                transition: .3s
+            
+            &:hover
+                svg
+                    transform: translateY(10px)
+
+.solution
+    display: flex
+    flex-direction: column
+    height: 100%
+    padding-bottom: 110px
+    +mq(lg)
+        padding-bottom: 75px
+    +mq(md)
+        padding-bottom: 40px
+    &__img
+        padding-top: 20px
+        padding-left: 20px
+        position: relative
+        margin-bottom: 30px
+
+        @include dynamic-block("a", 100%, 82%)
+        +mq(lg)
+            margin-bottom: 20px
+        +mq(md)
+            padding-top: 10px
+            padding-left: 10px
+        &::after
+            content: ''
+            display: block
+            border: 1px solid #000
+            position: absolute
+            top: 0
+            left: 0
+            right: 20px
+            bottom: 20px
+            z-index: 1
+            +mq(md)
+                right: 10px
+                bottom: 10px
+        a
+            display: block
+            padding-top: 20px
+            padding-left: 20px
+        img
+            position: relative
+            z-index: 2 
+            width: 100%
+            object-fit: cover
+            height: 100%
+    
+    &__title
+        padding-left: 20px
+        font-size: 22px
+        line-height: 145%
+        font-family: gpb
+        margin-bottom: 10px
+        color: #000
+        +mq(md)
+            font-size: 16px
+        &:hover
+            text-decoration: none
+            color: #000
+    
+    &__text
+        padding-left: 20px
+        margin-bottom: 30px
+        +mq(md)
+            font-size: 14px
+    &__link
+        padding-left: 20px
+        color: #000
+        margin-top: auto
+        &:hover
+            text-decoration: none
+            color: #000
+            span 
+                margin-right: 30px
+
+        span 
+            font-family: gpm
+            font-size: 16px
+            line-height: 15px
+            margin-right: 20px
+            transition: .3s
+            +mq(md)
+                font-size: 15px

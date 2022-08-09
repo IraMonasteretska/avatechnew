@@ -1,0 +1,112 @@
+.about-services
+    padding-bottom: 35px
+    +mq(md)
+        padding-bottom: 25px
+    .about-service
+        margin-bottom: 65px
+        +mq(lg)
+            margin-bottom: 40px
+        +mq(md)
+            margin-bottom: 25px
+        &__img
+            padding-top: 30px
+            padding-left: 30px
+            position: relative
+            +mq(lg)
+                margin-bottom: 30px
+            +mq(md)
+                padding-top: 20px
+                padding-left: 20px
+            &::after
+                content: ''
+                display: block
+                border: 1px solid #000
+                position: absolute
+                top: 0
+                left: 0
+                right: 30px
+                bottom: 30px
+                z-index: 1
+                +mq(md)
+                    right: 20px
+                    bottom: 20px
+            img
+                position: relative
+                z-index: 2 
+                width: 100%
+        &__content  
+            height: 100%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            padding-left: 80px
+            +mq(xxl)
+                padding-left: 50px
+            +mq(xl)
+                padding-left: 20px
+            +mq(lg)
+                padding-right: 30px
+                padding-left: 30px
+            +mq(md)
+                padding-right: 0px
+                padding-left: 0px
+        &__title 
+            font-size: 24px
+            line-height: 140%
+            font-family: gpb
+            padding-bottom: 30px
+            max-width: 400px
+            border-bottom: 1px solid #000
+            margin-bottom: 30px
+            +mq(xxl)
+                margin-bottom: 20px
+                padding-bottom: 20px
+                font-size: 22px
+            +mq(md)
+                font-size: 16px
+        &__text 
+            p 
+                font-size: 16px
+                line-height: 145%
+                margin-bottom: 25px
+                +mq(xxl)
+                    margin-bottom: 15px
+                +mq(md)
+                    font-size: 14px
+        &:nth-child(even)
+            .row    
+                flex-direction: row-reverse
+            .about-service
+                &__content 
+                    padding-left: 0
+                    padding-right: 80px
+                    +mq(xxl)
+                        padding-right: 50px
+                    +mq(xl)
+                        padding-right: 20px
+                    +mq(lg)
+                        padding-right: 30px
+                        padding-left: 30px
+                    +mq(md)
+                        padding-right: 0px
+                        padding-left: 0px
+                &__img
+                    padding-top: 30px
+                    padding-left: 0
+                    padding-right: 30px
+                    +mq(md)
+                        padding-top: 20px
+                        padding-right: 20px
+                    &::after
+                        content: ''
+                        display: block
+                        border: 1px solid #000
+                        position: absolute
+                        top: 0
+                        left: 30px
+                        right: 0
+                        bottom: 30px
+                        z-index: 1
+                        +mq(md)
+                            bottom: 20px
+                            left: 20px

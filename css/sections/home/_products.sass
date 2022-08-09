@@ -1,0 +1,211 @@
+.products
+    margin-bottom: 100px
+    +mq(md)
+        margin-bottom: 50px
+    &__title
+        margin-bottom: 100px
+        +mq(md)
+            margin-bottom: 50px
+    &__filter
+        margin-bottom: 100px
+        +mq(md)
+            margin-bottom: 50px
+
+
+    &__more
+        padding-top: 50px
+        display: flex
+        justify-content: center
+        &-btn
+            display: flex
+            flex-direction: column
+            align-items: center
+            cursor: pointer
+            svg
+                margin-top: 20px
+                transition: .3s
+
+            &:hover
+                svg
+                    transform: translateY(10px)
+.product
+    border: 1px solid rgba(0, 0, 0, 0.05)
+    // border: 1px solid #000000
+    margin-bottom: 20px
+    display: block
+    background: #fff
+
+    &__img 
+        text-align: center
+        overflow: hidden
+        img
+            object-fit: cover
+            height: 185px
+            transition: .3s
+            +mq(xxl)
+                height: 120px
+           
+            +mq(md)
+                height: 110px
+            +mq(sm)
+                height: 90px
+    &:hover
+        .product__img 
+            img 
+                transform: scale(1.1)
+    &__name 
+        font-size: 22px
+        font-family: gpb
+        line-height: 145%
+        color: #000
+        text-align: center
+        background: #fff
+        padding: 15px 0
+        transition: 0.3s
+        +mq(xxl)
+            font-size: 20px
+        +mq(xl)
+            font-size: 18px
+            padding: 10px 0
+        +mq(md)
+            font-size: 14px
+    
+    &:hover 
+        text-decoration: none
+        .product__name 
+            color: #fff 
+            background: #000 
+            text-decoration: none
+            
+    
+.nice-select
+    border-radius: 0
+    width: 100%
+    border: 1px solid rgba(0, 0, 0, 0.7)
+    font-size: 16px
+    line-height: 55px
+    height: 55px
+    float: none
+    background: #ffffff00
+    +mq(lg)
+        margin-bottom: 10px
+    &::after
+        height: 15px
+        width: 15px
+        border-bottom: 1px solid rgba(0, 0, 0, 0.7)
+        border-right: 1px solid rgba(0, 0, 0, 0.7)
+        top: 20px
+        right: 20px
+
+    .list
+        right: 0
+        border-radius: 0
+        border: 1px solid rgba(0, 0, 0, 0.7)
+
+.check-box
+    &__wrapper
+        position: relative
+        +mq(lg)
+            margin-bottom: 10px
+    &__title
+        border: 1px solid rgba(0, 0, 0, 0.7)
+        font-size: 16px
+        line-height: 55px
+        height: 55px
+        padding-left: 18px
+        padding-right: 30px
+        position: relative
+        &::after
+            content: ''
+            position: absolute
+            height: 15px
+            width: 15px
+            border-bottom: 1px solid rgba(0, 0, 0, 0.7)
+            border-right: 1px solid rgba(0, 0, 0, 0.7)
+            top: 20px
+            right: 20px
+            transform: rotate(45deg)
+            transform-origin: 66% 66%
+            margin-top: -4px
+            transition: all 0.15s ease-in-out
+        &.active
+            &::after
+                -webkit-transform: rotate(-135deg)
+                -ms-transform: rotate(-135deg)
+                transform: rotate(-135deg)
+    
+    &__list
+        background-color: #fff
+        box-sizing: border-box
+        margin-top: 4px
+        opacity: 0
+        overflow: hidden
+        padding: 7px 0
+        pointer-events: none
+        position: absolute
+        top: 100%
+        left: 0
+        right: 0
+        -webkit-transform-origin: 50% 0
+        -ms-transform-origin: 50% 0
+        transform-origin: 50% 0
+        -webkit-transform: scale(0.75) translateY(-21px)
+        -ms-transform: scale(0.75) translateY(-21px)
+        transform: scale(0.75) translateY(-21px)
+        -webkit-transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out
+        transition: all 0.2s cubic-bezier(0.5, 0, 0, 1.25), opacity 0.15s ease-out
+        z-index: 9
+        border: 1px solid rgba(0, 0, 0, 0.7)
+        &.active
+            opacity: 1
+            pointer-events: auto
+            -webkit-transform: scale(1) translateY(0)
+            -ms-transform: scale(1) translateY(0)
+            transform: scale(1) translateY(0)
+            
+
+.check-box-item
+    transition: 0.2s
+    position: relative
+    &:hover
+        background: #f6f6f6
+
+    &__label 
+        margin: 0
+        cursor: pointer
+        padding: 8px 18px 8px 40px
+        display: block
+        color: #888888
+        &:after 
+            content: ''
+            width: 12px
+            height: 12px
+            display: block
+            border: 1px solid #888888
+            box-sizing: border-box
+            border-radius: 2px
+            position: absolute
+            left: 18px
+            top: 14px
+        &::before
+            content: ''
+            width: 10px
+            height: 8px
+            display: block
+            background-image: url(../img/checked.svg)
+            position: absolute
+            left: 19px
+            top: 16px
+            z-index: 2
+            background-size: cover
+            background-repeat: no-repeat
+    input 
+        margin: 0
+        display: none
+
+        &:checked + .check-box-item__label
+            color: #000
+            font-family: gpm
+            &::after
+                background: #888888
+            
