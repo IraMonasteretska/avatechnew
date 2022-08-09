@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/aos.css">
+    <!-- <link rel="stylesheet" href="./css/swiper-bundle.css"> -->
+    <link rel="icon" href="./img/favicon.png" sizes="32x32" />
+    <link rel="stylesheet" href="./css/nice-select.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApj8qSzyO4DqXeQtFQPKI4mi6p-MBwlpo&libraries=places"></script>
+    <title>AvaTech</title>
+</head>
+<body class="">
+    <header class="header__wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="header_row ">
+                    
+                    <div class="header__logo">
+                        <a href="index.html">
+                            <img class="logo-big" src="./img/logo_icon.svg" alt="logo">
+                            <img class="logo-small" src="./img/logo_small.svg" alt="logo">
+                        </a>
+                    </div>
+                
+                    <div class=" header__menu-wrap">
+                        <div class="header__menu">
+                            <ul>
+                                <li >
+                                    <a href="about.html">О компании</a>
+                                </li>
+                                <li >
+                                    <a href="solutions.html">Решения</a>
+                                </li>
+                                <li class="current-menu-item ">
+                                    <a href="products.html">Продукты</a>
+                                </li>
+                                <li>
+                                    <a href="contacts.html">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__soc_mob">
+                            <a href="#">
+                                <img src="./img/Icon_youtube.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_inst.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_fb.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_in.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="header__lang_mob">
+                            <ul>
+                                <li class="current-lang">
+                                    <a href="#">RU</a>
+                                </li>
+                                <li>
+                                    <a href="#">UA</a>
+                                </li>
+                                <li>
+                                    <a href="#">EN</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="header__phone">
+                        <span>Связаться с нами</span>
+                        <img src="./img/phone_w.svg" alt="">
+                    </div>
+                    <div class="header__soc">
+                        <a href="#">
+                            <img src="./img/Icon_youtube.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="./img/Icon_inst.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="./img/Icon_fb.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="./img/Icon_in.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="header__lang">
+                        <ul>
+                            <li class="current-lang">
+                                <a href="#">RU</a>
+                            </li>
+                            <li>
+                                <a href="#">UA</a>
+                            </li>
+                            <li>
+                                <a href="#">EN</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="burger-menu ">
+                        <img class="burger-menu_open" src="./img/burger.svg" alt="">
+                        <img class="burger-menu_close" src="./img/close.svg" alt="">
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+  
+        <div class="breadcrumbs-wrapper">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <span>
+                        <a href="index.html">Главная</a>
+                    </span>
+                    —
+                    <span>
+                        <a href="index.html">Продукты</a>
+                    </span>
+                    —
+                    <span>
+                        MOLO
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+      
+
+        <section class="single-product">
+            <div class="container">
+                <div class="product__wrapper">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="product__slider">
+                                <div class="product-slider-nav">
+                                    <div class="slider-nav-item">
+                                        <div class="slider-nav-item__img">
+                                            <img src="./img/roduct-slide-1.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="slider-nav-item">
+                                        <div class="slider-nav-item__img">
+                                            <img src="./img/roduct2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="slider-nav-item">
+                                        <div class="slider-nav-item__img">
+                                            <video poster="./img/about_video.jpg" >
+                                            </video>
+                                            <div class="slider-nav-item__play">
+                                                <img src="./img/play.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-nav-item">
+                                        <div class="slider-nav-item__img">
+                                            <video poster="./img/about_video.jpg" >
+                                            </video>
+                                            <div class="slider-nav-item__play">
+                                                <img src="./img/play.svg" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider-nav-item">
+                                        <div class="slider-nav-item__img">
+                                            <img src="./img/roduct1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="slider-nav-item">
+                                        <div class="slider-nav-item__img">
+                                            <img src="./img/roduct2.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-slider__for">
+                                    <div class="product-slider-for">
+                                        <div class="slider-for-item">
+                                            <img src="./img/roduct-slide-1.jpg" alt="">
+                                        </div>
+                                        <div class="slider-for-item video">
+                                            <img src="./img/roduct2.png" alt="">
+                                        </div>
+                                        <div class="slider-for-item video">
+                                            <!-- <img src="./img/roduct3.png" alt=""> -->
+                                            <video controls poster="./img/about_video.jpg" >
+                                                <source src="./img/AVATECH.mp4" type="video/mp4">
+                                            </video>
+                                            <div class="about__video-play1">
+                                                <img src="./img/play.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="slider-for-item video">
+                                            <video controls poster="./img/about_video.jpg" >
+                                                <source src="./img/AVATECH.mp4" type="video/mp4">
+                                            </video>
+                                            <div class="about__video-play2">
+                                                <img src="./img/play.svg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="slider-for-item">
+                                            <img src="./img/roduct1.png" alt="">
+                                        </div>
+                                        <div class="slider-for-item">
+                                            <img src="./img/roduct2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="single-product__share">
+                                        <div class="share__list-btn">
+                                            <img src="./img/share_icon.svg" alt="">
+                                        </div>
+                                        <div class="share__list">
+                                            <div class="share__list-item">
+                                                <a href="#">
+                                                   <img src="./img/copy.svg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="share__list-item">
+                                                <a href="#">
+                                                    <img src="./img/whatsapp.svg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="share__list-item">
+                                                <a href="#">
+                                                    <img src="./img/viber.svg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="share__list-item">
+                                                <a href="#">
+                                                    <img src="./img/telegram.svg" alt="">
+                                                </a>
+                                            </div>
+                                            <div class="share__list-item">
+                                                <a href="#">
+                                                    <img src="./img/envelope.svg" alt="">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="product__summary">
+                                <div class="product__title">MOLO</div>
+                                <div class="product__attributes">
+                                   <div class="product-atr">
+                                       <div class="product-atr__name">Тип</div>
+                                       <div class="product-atr__list">
+                                            <ul>
+                                                <li>Встроенные</li>
+                                            </ul>
+                                       </div>
+                                   </div>
+                                   <div class="product-atr">
+                                        <div class="product-atr__name">Категория</div>
+                                        <div class="product-atr__list">
+                                            <ul>
+                                                <li>
+                                                    <a href="#">Food зона</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Style зона</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Work зона</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="product-atr">
+                                        <div class="product-atr__name">Цвет</div>
+                                        <div class="product-atr__list">
+                                             <ul>
+                                                 <li>Под заказ</li>
+                                             </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product__desc-text">
+                                    <p>
+                                        “Еще больше угол раскрытия светового потока при универсальной области 
+                                        применения. Универсальность данного светильника не просто слова, он 
+                                        позволяет создать общее либо акцентное освещение в зависимости от
+                                        ваших задач. Jazz XL поможет равномерно залить комнату мягким 
+                                        рассеянным светом либо сделает акцент на нужном вам товаре. Дизайн 
+                                        светильника идеально подойдет для любого помещения, не отвлекая на 
+                                        себя внимания покупателя.” Встраиваемый светильник для общего освещения Jazz XL.  
+                                    </p>
+                                </div>
+                                <div class="product__btn">
+                                    <a href="#application" class="btn btn_black btn_bord  scroll-section">Узнать больше</a>
+                                    <a href="#" class="btn btn_white btn_bord">Перейти к проектам</a>
+                                    
+                                </div>
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="product-description-wrapper">
+            <section class="product-menu" >
+                <div class="container">
+                    <div class="product-menu__list">
+                        <a href="#application_area" class="product-menu-item scroll-section active" data-screen='#application_area'>
+                            Область применения
+                        </a>
+                        <a href="#specification" class="product-menu-item scroll-section" data-screen='#specification'>
+                            Спецификация
+                        </a>
+                        <a href="#materials" class="product-menu-item scroll-section" data-screen='#materials'>
+                            Материалы
+                        </a>
+                        <a href="#electrical" class="product-menu-item scroll-section" data-screen='#electrical'>
+                            Елекетрооборудование
+                        </a>
+                        <a href="#mounting_type" class="product-menu-item scroll-section" data-screen='#mounting_type'>
+                            Крепежный тип
+                        </a>
+                        <a href="#downloads" class="product-menu-item scroll-section" data-screen='#downloads'>
+                            Загрузки
+                        </a>
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="application" id="application">
+                <div class="container">
+                    <div class="desc-title" id="application_area">
+                        Область применения
+                    </div>
+                    <div class="application__img">
+                        <img src="./img/application_img.jpg" alt="">
+                    </div>
+                    <div class="application__list">
+                        <div class="application__list-item active">
+                            <img src="./img/application-icon-1.svg" alt="">
+                        </div>
+                        <div class="application__list-item">
+                            <img src="./img/application-icon-2.svg" alt="">
+                        </div>
+                        <div class="application__list-item active">
+                            <img src="./img/application-icon-3.svg" alt="">
+                        </div>
+                        <div class="application__list-item">
+                            <img src="./img/application-icon-4.svg" alt="">
+                        </div>
+                        <div class="application__list-item active">
+                            <img src="./img/application-icon-5.svg" alt="">
+                        </div>
+                        <div class="application__list-item">
+                            <img src="./img/application-icon-6.svg" alt="">
+                        </div>
+                        <div class="application__list-item">
+                            <img src="./img/application-icon-7.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="application__text">
+                        Благодаря своей мощности светильник может устанавливаться на высокие потолки. 
+                        Светильник применяется для освещения в торговых залах различных магазинов, офисов, галерей и отелей.
+                    </div>
+                </div>
+            </section>
+            
+            <section class="product-description">
+                <div class="container">
+                    <div class="description-item-row">
+                        <div class="desc-title" id="specification">
+                            Спецификация
+                        </div>
+                        <div class="description-item__list">
+                            <ul>
+                                <li>
+                                    <span class="description-item__name">Lumen category</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">3250 lm - 5250 lm </span>
+                                </li>
+                                <li>
+                                    <span class="description-item__name">Цветоавя температура</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">2700 K, 3000 K, 4000 K, 5000 К </span>
+                                </li>
+                                <li>
+                                    <span class="description-item__name">CRI</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">80,9</span>
+                                </li>
+                                <li>
+                                    <span class="description-item__name">Диапозон регулировок</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">-</span>
+                                </li>
+                                <li>
+                                    <span class="description-item__name">Степень защиты</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">80,9</span>
+                                </li>
+                                <li>
+                                    <span class="description-item__name">CRI</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">IP20</span>
+                                </li>
+                                <li>
+                                    <span class="description-item__name">Угол раскрытия</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">65°</span>
+                                </li>
+                                <li>
+                                    <span class="description-item__name">Сертификаты</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">CE</span>
+                                </li>
+                                <li>
+                                    <span class="description-item__name">Срок службы</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">50 000 часов L80B10</span>
+                                </li>
+                                <li>
+                                    <span class="description-item__name">Гарантия</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">5 лет/50 000 часов</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="description-item-row">
+                        <div class="desc-title" id="materials">
+                            Материалы
+                        </div>
+                        <div class="description-item__list">
+                            <ul>
+                                <li>
+                                    <span class="description-item__name">Корпус</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">Алюминиевый</span>
+                                </li>
+                                <li>
+                                    <span class="description-item__name">Цвет светильника</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">Black, White</span>
+                                </li>
+                                <li>
+                                    <span class="description-item__name">Оптический элемент</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">алюминиевый</span>
+                                </li>
+                                <li>
+                                    <span class="description-item__name">Оптический элемент</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">алюминиевый рефлектор</span>
+                                </li>
+                                <li>
+                                    <span class="description-item__name">Подключение</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">клеммы WAGO</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="description-item-row">
+                        <div class="desc-title" id="electrical">
+                            Елекетрооборудование
+                        </div>
+                        <div class="description-item__list">
+                            <ul>
+                                <li>
+                                    <span class="description-item__name">Источник питания</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">LED driver, LED driver DALI on request</span>
+                                </li>
+                                <li>
+                                    <span class="description-item__name">Источник света</span>
+                                    <span class="description-item__mid"></span>
+                                    <span class="description-item__val">LED COB</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="description-item-row">
+                        <div class="desc-title" id="mounting_type">
+                            Тип крепления
+                        </div>
+                        <div class="description-item__list">
+                            <ul>
+                                <li>
+                                    <span class="description-item__name">Пружинный кронштейн, монтажный диаметр 205мм</span>
+                               
+                                    
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="description-item-row">
+                        <div class="desc-title" id="downloads">
+                            Загрузки
+                        </div>
+
+                        <div class="description-item__downloads">
+                            <p>Документы</p>
+                            <a href="#" download>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9276 8.65196C19.9307 8.66123 19.9338 8.67057 19.937 8.68C19.965 8.764 19.982 8.85 19.987 8.938C19.9879 8.94813 19.9907 8.95762 19.9935 8.96697C19.9968 8.97792 20 8.98867 20 9V20C20 21.103 19.103 22 18 22H6C4.897 22 4 21.103 4 20V4C4 2.897 4.897 2 6 2H13C13.0113 2 13.0221 2.0032 13.033 2.00647C13.0424 2.00925 13.0519 2.01208 13.062 2.013C13.151 2.018 13.237 2.036 13.321 2.064C13.331 2.06743 13.3409 2.07056 13.3509 2.07368C13.3727 2.08057 13.3943 2.08736 13.415 2.097C13.521 2.146 13.622 2.207 13.708 2.293L19.708 8.293C19.794 8.379 19.855 8.48 19.904 8.586C19.9132 8.60787 19.9204 8.62974 19.9276 8.65196ZM14 8H16.586L14 5.414V8ZM6 4V20H18.002L18 10H13C12.447 10 12 9.553 12 9V4H6Z" fill="#222222"/>
+                                    <path d="M13 12H11V14H9L12 18L15 14H13V12Z" fill="#222222"/>
+                                </svg>
+                                <span>Catalog page</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="projects">
+            <div class="container">
+                <div class="single-product-projects-title">
+                    <div class="s-title">
+                        Проекты
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="projects__items-slider">
+                    <div class="projects__items_slider">
+                        <div class="projects-item__wrap">
+                            <div class="projects-item">
+                                <div class="projects-item__content">
+                                    <a href="single-project.html" class="projects-item__img">
+                                        <img src="./img/proj1.jpg" alt="">
+                                    </a>
+                                    <a href="single-project.html" class="projects-item__title">МегаМаркет</a>
+                                    <div class="projects-item__desc">
+                                        <div class="projects-item__name">МегаМаркет</div>
+                                        <div class="projects-item__text">Полная замена системы освещения на LED. Поставка и монтаж новых светильников</div>
+                                        <div class="projects-item__btn">
+                                            <a href="single-project.html" class="btn btn_black">Подробней</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects-item__wrap">
+                            <div class="projects-item">
+                                <div class="projects-item__content">
+                                    <a href="single-project.html" class="projects-item__img">
+                                        <img src="./img/proj2.jpg" alt="">
+                                    </a>
+                                    <a href="single-project.html" class="projects-item__title">АТБ</a>
+                                    <div class="projects-item__desc">
+                                        <div class="projects-item__name">АТБ</div>
+                                        <div class="projects-item__text">Полная замена системы освещения на LED. Поставка.. </div>
+                                        <div class="projects-item__btn">
+                                            <a href="single-project.html" class="btn btn_black">Подробней</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects-item__wrap">
+                            <div class="projects-item">
+                                <div class="projects-item__content">
+                                    <a href="single-project.html" class="projects-item__img">
+                                        <img src="./img/proj3.jpg" alt="">
+                                    </a>
+                                    <a href="single-project.html" class="projects-item__title">Brocard</a>
+
+                                    <div class="projects-item__desc">
+                                        <div class="projects-item__name">Brocard</div>
+                                        <div class="projects-item__text">Полная замена системы освещения на LED. Поставка.. </div>
+                                        <div class="projects-item__btn">
+                                            <a href="single-project.html" class="btn btn_black">Подробней</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects-item__wrap">
+                            <div class="projects-item">
+                                <div class="projects-item__content">
+                                    <a href="single-project.html" class="projects-item__img">
+                                        <img src="./img/proj4.jpg" alt="">
+                                    </a>
+                                    <a href="single-project.html" class="projects-item__title">Douglas</a>
+                                    <div class="projects-item__desc">
+                                        <div class="projects-item__name">Douglas</div>
+                                        <div class="projects-item__text">Полная замена системы освещения на LED. Поставка.. </div>
+                                        <div class="projects-item__btn">
+                                            <a href="single-project.html" class="btn btn_black">Подробней</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projects-item__wrap">
+                            <div class="projects-item">
+                                <div class="projects-item__content">
+                                    <a href="single-project.html" class="projects-item__img">
+                                        <img src="./img/proj5.jpg" alt="">
+                                    </a>
+                                    <a href="single-project.html" class="projects-item__title">Eva</a>
+                                    <div class="projects-item__desc">
+                                        <div class="projects-item__name">Eva</div>
+                                        <div class="projects-item__text">Полная замена системы освещения на LED. Поставка и монтаж новых светильников</div>
+                                        <div class="projects-item__btn">
+                                            <a href="single-project.html" class="btn btn_black">Подробней</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="projects-slider-prev">
+                        <svg width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L1 12.5L12 24" stroke="black"/>
+                        </svg>
+                    </div>
+                    <div class="projects-slider-next">
+                        <svg width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L12 12.5L1 24" stroke="black"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="related-products">
+            <div class="container">
+                <div class="related-products-title">
+                    <div class="s-title">
+                        вас также может заинтересовать
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="products__items">
+                    <div class="related-slider-prev">
+                        <svg width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 1L1 12.5L12 24" stroke="black"/>
+                        </svg>
+                    </div>
+                    <div class="related-slider-next">
+                        <svg width="13" height="25" viewBox="0 0 13 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L12 12.5L1 24" stroke="black"/>
+                        </svg>
+                    </div>
+                    <div class="related-products__slider">
+                        <a href="#" class="product">
+                            <div class="product__img">
+                                <img src="./img/roduct1.png" alt="">
+                            </div>
+                            <div class="product__name">Jazz</div>
+                        </a>
+                        <a href="#" class="product">
+                            <div class="product__img">
+                                <img src="./img/roduct2.png" alt="">
+                            </div>
+                            <div class="product__name">Komo</div>
+                        </a>
+                        <a href="#" class="product">
+                            <div class="product__img">
+                                <img src="./img/roduct3.png" alt="">
+                            </div>
+                            <div class="product__name">Duo</div>
+                        </a>
+                        <a href="#" class="product">
+                            <div class="product__img">
+                                <img src="./img/roduct4.png" alt="">
+                            </div>
+                            <div class="product__name">Cube</div>
+                        </a>
+                        <a href="#" class="product">
+                            <div class="product__img">
+                                <img src="./img/roduct2.png" alt="">
+                            </div>
+                            <div class="product__name">Duo</div>
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+     
+    </main>
+    <footer class="footer">
+        <div class="top-btn">
+            <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 10L10 1L19 10" stroke="white" stroke-linecap="square"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="footer__logo">
+                        <a href="#">
+                            <img src="./img/logo.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footer__menu">
+                        <ul>
+                            <li>
+                                <a href="#">О компании</a>
+                            </li>
+                            <li>
+                                <a href="#">Решения</a>
+                            </li>
+                            <li>
+                                <a href="#">Продукты</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="footer__contacts">
+                        <div class="footer__select">
+                            <select class="nice__select" name="" id="contacts_select">
+                                <option value="ukr">УКРАИНА</option>
+                                <option value="de">НІМЕЧЧИНА</option>
+                                <option value="bl">БІЛОРУСЬ</option>
+                            </select>
+                        </div>
+                        <div class="footer__contact-list active" data-list='ukr'>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__contact-list" data-list='de'>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                         Sophie-Christ. Str 4 Mainz, 55127, Germany
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__contact-list" data-list='bl'>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        м. Гомель, вул. Базова, б. 6
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer__soc">
+                        <div class="footer__btn">
+                            <a href="#" class="btn btn_black">Обратный звонок</a>
+                        </div>
+                        <div class="footer__icons">
+                            <a href="#">
+                                <img src="./img/Icon_youtube.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_inst.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_fb.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_in.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copy">
+                <span>Copyright Ava Tech 2021</span>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+    
+   
+</body>
+<script src='./js/jquery.js'></script>
+<script src='./js/bootstrap.min.js'></script>
+<script src='./js/slick.min.js'></script>
+<script src='./js/aos.js'></script>
+<script src='./js/swiper-bundle.min.js'></script>
+<script src='./js/jquery.nice-select.min.js'></script>
+<script src='./js/main.js'></script>
+
+
+</html>

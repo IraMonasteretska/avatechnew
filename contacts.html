@@ -1,0 +1,1419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/aos.css">
+    <!-- <link rel="stylesheet" href="./css/swiper-bundle.css"> -->
+    <link rel="stylesheet" href="./css/nice-select.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="icon" href="./img/favicon.png" sizes="32x32" />
+
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApj8qSzyO4DqXeQtFQPKI4mi6p-MBwlpo&libraries=places"></script>
+    <title>AvaTech</title>
+</head>
+<body class="">
+    <header class="header__wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="header_row ">
+                    
+                    <div class="header__logo">
+                        <a href="index.html">
+                            <img class="logo-big" src="./img/logo_icon.svg" alt="logo">
+                            <img class="logo-small" src="./img/logo_small.svg" alt="logo">
+                        </a>
+                    </div>
+                
+                    <div class=" header__menu-wrap">
+                        <div class="header__menu">
+                            <ul>
+                                <li >
+                                    <a href="about.html">О компании</a>
+                                </li>
+                                <li >
+                                    <a href="solutions.html">Решения</a>
+                                </li>
+                                <li >
+                                    <a href="products.html">Продукты</a>
+                                </li>
+                                <li class="current-menu-item ">
+                                    <a href="contacts.html">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__soc_mob">
+                            <a href="#">
+                                <img src="./img/Icon_youtube.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_inst.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_fb.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_in.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="header__lang_mob">
+                            <ul>
+                                <li class="current-lang">
+                                    <a href="#">RU</a>
+                                </li>
+                                <li>
+                                    <a href="#">UA</a>
+                                </li>
+                                <li>
+                                    <a href="#">EN</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="header__phone">
+                        <span>Связаться с нами</span>
+                        <img src="./img/phone_w.svg" alt="">
+                    </div>
+                    <div class="header__soc">
+                        <a href="#">
+                            <img src="./img/Icon_youtube.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="./img/Icon_inst.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="./img/Icon_fb.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="./img/Icon_in.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="header__lang">
+                        <ul>
+                            <li class="current-lang">
+                                <a href="#">RU</a>
+                            </li>
+                            <li>
+                                <a href="#">UA</a>
+                            </li>
+                            <li>
+                                <a href="#">EN</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="burger-menu ">
+                        <img class="burger-menu_open" src="./img/burger.svg" alt="">
+                        <img class="burger-menu_close" src="./img/close.svg" alt="">
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+  
+        <div class="breadcrumbs-wrapper">
+            <div class="container">
+                <div class="breadcrumbs">
+                    <span>
+                        <a href="index.html">Главная</a>
+                    </span>
+                    —
+                    <span>
+                        Контакты
+                    </span>
+                </div>
+            </div>
+        </div>
+        
+
+        <section class="findstore-section"> 
+            <div class="container">
+                <div class="findstore-section__title">
+                    <div class="s-title">
+                        Контакты
+                    </div>
+                </div>
+                <div class="row ">
+                    <div class="col-lg-4">
+                        <div class="findstore__filter">
+                            <div class="findfiltsect">
+                                <div class="findstore__search">
+                                    
+                                    <div class="select-wrapper">
+                                        <select name="" id="country-select" class="nice__select">
+                                            <option value="All">All</option>
+                                            <option value="Ukraine">Ukraine</option>
+                                            <option value="Slovakia">Slovakia</option>
+                                            <option value="France">France</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="findstore__shops">
+                                <div class="findstore__shops-wrap" >
+                                    <div id="markers"></div>
+                                    <div class="no-items">no-items</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-8">
+                        <div class="findstore__mapsect">
+                            <div class="map-wrapper">
+                                <div id="map"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </section>
+        
+     
+    </main>
+    <footer class="footer">
+        <div class="top-btn">
+            <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 10L10 1L19 10" stroke="white" stroke-linecap="square"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="footer__logo">
+                        <a href="#">
+                            <img src="./img/logo.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footer__menu">
+                        <ul>
+                            <li>
+                                <a href="#">О компании</a>
+                            </li>
+                            <li>
+                                <a href="#">Решения</a>
+                            </li>
+                            <li>
+                                <a href="#">Продукты</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="footer__contacts">
+                        <div class="footer__select">
+                            <select class="nice__select" name="" id="contacts_select">
+                                <option value="ukr">УКРАИНА</option>
+                                <option value="de">НІМЕЧЧИНА</option>
+                                <option value="bl">БІЛОРУСЬ</option>
+                            </select>
+                        </div>
+                        <div class="footer__contact-list active" data-list='ukr'>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__contact-list" data-list='de'>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                         Sophie-Christ. Str 4 Mainz, 55127, Germany
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__contact-list" data-list='bl'>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        м. Гомель, вул. Базова, б. 6
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer__soc">
+                        <div class="footer__btn">
+                            <a href="#" class="btn btn_black">Обратный звонок</a>
+                        </div>
+                        <div class="footer__icons">
+                            <a href="#">
+                                <img src="./img/Icon_youtube.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_inst.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_fb.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_in.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copy">
+                <span>Copyright Ava Tech 2021</span>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function initMap() {
+            // map options
+            var stylemap = [
+                {
+                    "featureType": "all",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "weight": "2.00"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "geometry.stroke",
+                    "stylers": [
+                        {
+                            "color": "#9c9c9c"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "all",
+                    "elementType": "labels.text",
+                    "stylers": [
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#f2f2f2"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "landscape.man_made",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "saturation": -100
+                        },
+                        {
+                            "lightness": 45
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#eeeeee"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#7b7b7b"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.highway",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "simplified"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "road.arterial",
+                    "elementType": "labels.icon",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "transit",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "all",
+                    "stylers": [
+                        {
+                            "color": "#46bcec"
+                        },
+                        {
+                            "visibility": "on"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "geometry.fill",
+                    "stylers": [
+                        {
+                            "color": "#cad2d3"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "labels.text.fill",
+                    "stylers": [
+                        {
+                            "color": "#070707"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "water",
+                    "elementType": "labels.text.stroke",
+                    "stylers": [
+                        {
+                            "color": "#ffffff"
+                        }
+                    ]
+                }
+            ]
+            var options = {
+                zoom: 5,
+                center: {
+                    lat: 46.8302317,
+                    lng: 12.2224921
+                },
+                styles: stylemap,
+            }
+            const labels = "";
+    
+            mcOptions = {
+                styles: [{
+                        textColor: 'white',
+                        height: 48,
+                        url: "img/cluster.png",
+                        width: 44
+                    },
+                    {
+                        textColor: 'white',
+                        height: 48,
+                        url: "img/cluster.png",
+                        width: 44
+                    },
+                    {
+                        textColor: 'white',
+                        height: 48,
+                        url: "img/cluster.png",
+                        width: 44
+                    },
+                    {
+                        textColor: 'white',
+                        height: 48,
+                        url: "img/cluster.png",
+                        width: 44
+                    },
+                    {
+                        textColor: 'white',
+                        height: 48,
+                        url: "img/cluster.png",
+                        width: 44
+                    }
+                ]
+            }
+    
+            var map = new google.maps.Map(document.getElementById('map'), options);
+            // Add a marker clusterer to manage the markers.
+    
+            //Add marker
+            var markers = [
+    
+                {
+                    coords: {
+                        lat: 49.8225468,
+                        lng: 24.1133993
+                    },
+                    content: `
+                        <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+    
+                    `
+                },
+                {
+                    coords: {
+                        lat: 49.8431884,
+                        lng: 24.0248358
+                    },
+                    content: `
+                        <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 49.2355752,
+                        lng: 23.883286
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 47.4194646,
+                        lng: 18.9927268
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 47.4799668,
+                        lng: 19.0507386
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 47.5264903,
+                        lng: 18.9879709
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 47.1786219,
+                        lng: 18.3942966
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 47.1152602,
+                        lng: 18.3633095
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 48.856977,
+                        lng: 2.3472257
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 48.7543441,
+                        lng: 2.3215783
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 48.7802642,
+                        lng: 1.9642106
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 48.4532931,
+                        lng: 2.5041298
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 47.1380951,
+                        lng: -1.5821305
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 43.2949381,
+                        lng: 5.3581403
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 47.1824894,
+                        lng: -1.5391631
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 43.351406,
+                        lng: 5.351537
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 51.5185603,
+                        lng: -0.1156527
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 51.4925911,
+                        lng: -0.086658
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 50.9786252,
+                        lng: 10.3120153
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 52.5168731,
+                        lng: 13.3776729
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 52.5092491,
+                        lng: 13.3505341
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 52.4973137,
+                        lng: 13.4149179
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 52.5632244,
+                        lng: 13.4197571
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 52.5492239,
+                        lng: 13.0597026
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 52.3209228,
+                        lng: 9.7925675
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 52.2539811,
+                        lng: 9.9992756
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+                {
+                    coords: {
+                        lat: 52.6222289,
+                        lng: 13.4672432
+                    },
+                    content: `
+                    <p class="title">Адрес:</p>
+                        <ul>
+                            <li>
+                                ул. Вацлава Гавела 4,Киев, Украина, 02000
+                            </li>
+                        </ul>
+                        <p class="title">Номер телефона:</p>
+                        <ul>
+                            <li>+38 (044) 351 19 99</li>
+                        </ul>
+                        <p class="title">Почта:</p>
+                        <ul>
+                            <li>info@ava-tech.com.ua</li>
+                        </ul>
+                    `
+                },
+            ];
+    
+            // Loop through markers
+            var gmarkers = [];
+            for (var i = 0; i < markers.length; i++) {
+                gmarkers.push(addMarker(markers[i]));
+                // console.log(i);
+                jQuery('#markers').append('<div class="findstore__shop findstore__shop-item-' + i + '" data-markerid="' + i + '" > ' + markers[i].content + '</div>');
+    
+            }
+    
+            jQuery('.findstore__shop').on('click', function (e) {
+                var idc = $(this).data('markerid');
+                var gmMap = markers[idc].coords;
+                map.setZoom(12);
+                map.setCenter(gmMap)
+            });
+    
+            //Add MArker function
+            function addMarker(props, i) {
+                var marker = new google.maps.Marker({
+                    position: props.coords,
+                    map: map,
+                    icon: {
+                        url: "img/mapmarker.png",
+                        scaledSize: new google.maps.Size(24, 32)
+                    },
+                });
+    
+                
+    
+                //Check content
+                if (props.content) {
+                    var infoWindow = new google.maps.InfoWindow({
+                        content: props.content
+                    });
+                    marker.addListener('click', function () {
+                        infoWindow.open(map, marker);
+                    });
+                }
+                return marker;
+            }
+    
+    
+            //init clusterer with your options
+            var markerCluster = new MarkerClusterer(map, gmarkers, mcOptions);
+    
+    
+            // my local
+            // const locationButton = document.getElementById("button-loc");
+            // locationButton.addEventListener("click", () => {
+            //     if (navigator.geolocation) {
+            //         navigator.geolocation.getCurrentPosition(
+            //             (position) => {
+            //                 const pos = {
+            //                     lat: position.coords.latitude,
+            //                     lng: position.coords.longitude,
+            //                 };
+            //                 map.setZoom(12);
+            //                 map.setCenter(pos);
+            //                 var marker = new google.maps.Marker({
+            //                     position: pos,
+            //                     map: map,
+            //                     icon: {
+            //                         url: "img/mapmarker.png",
+            //                         scaledSize: new google.maps.Size(24, 32)
+            //                     },
+            //                 });
+            //             },
+            //         );
+            //     }
+            // });
+    
+    
+            // COUNTRY 
+            function newLocation(newLat, newLng) {
+                map.setCenter({
+                    lat: newLat,
+                    lng: newLng,
+                });
+    
+            }
+    
+            $('#country-select').change(function () {
+                if ($('#country-select option:selected').val() == 'All') {
+                    newLocation(46.8302317, 12.2224921);
+                    map.setZoom(4);
+    
+                }
+                if ($('#country-select option:selected').val() == 'Ukraine') {
+                    newLocation(48.317773, 30.9366666);
+                    map.setZoom(5);
+    
+    
+                }
+                if ($('#country-select option:selected').val() == 'Slovakia') {
+                    newLocation(47.168859, 18.5786351);
+                    map.setZoom(7);
+    
+                }
+                if ($('#country-select option:selected').val() == 'France') {
+                    newLocation(46.1390888, 2.4336308);
+                    map.setZoom(6);
+                }
+                if ($('#country-select option:selected').val() == 'Ireland') {
+                    newLocation(53.161955, -8.010161);
+                    map.setZoom(7);
+                }
+    
+            });
+            
+    
+            // show Visible Markers
+    
+            function showVisibleMarkers() {
+                var bounds = map.getBounds(),
+                    count = 0;
+                                            
+                for (var i = 0; i < markers.length; i++) {
+                    var marker = markers[i],
+                        infoPanel = $('.findstore__shop-item-' + (i) ); // array indexes start at zero, but not our class names :)
+                                
+                    if(bounds.contains(marker.coords)===true) {
+                        infoPanel.show().addClass('show-item');
+                        count++;
+                        
+                    }
+                    else {
+                        infoPanel.hide().removeClass('show-item');
+                        
+                    }
+                    if ($('.show-item').length) {
+                        $('.no-items').hide();
+                    }
+                    else{
+                        $('.no-items').show();
+                    }
+    
+                }
+                
+            }
+    
+            google.maps.event.addListener(map, 'idle', function() {
+                showVisibleMarkers();
+            });
+    
+            // Responsive zoom
+            if ($(window).width() < 1200) {
+                map.setZoom(4);
+    
+                $('#country-select').change(function () {
+                    if ($('#country-select option:selected').val() == 'All') {
+                        newLocation(46.8302317, 12.2224921);
+                        map.setZoom(4);
+                    }
+                    if ($('#country-select option:selected').val() == 'Ukraine') {
+                        newLocation(48.317773, 30.9366666);
+                        map.setZoom(5);
+    
+                    }
+                    if ($('#country-select option:selected').val() == 'Slovakia') {
+                        newLocation(48.668859, 18.5786351);
+                        map.setZoom(6);
+                    }
+                    if ($('#country-select option:selected').val() == 'France') {
+                        newLocation(46.1390888, 2.4336308);
+                        map.setZoom(5.5);
+                    }
+    
+                });
+            }
+            if ($(window).width() < 576) {
+                map.setZoom(3.3);
+    
+                $('#country-select').change(function () {
+                    if ($('#country-select option:selected').val() == 'All') {
+                        newLocation(46.8302317, 12.2224921);
+                        map.setZoom(3.3);
+                    }
+                    if ($('#country-select option:selected').val() == 'Ukraine') {
+                        newLocation(48.317773, 30.9366666);
+                        map.setZoom(4.5);
+    
+                    }
+                    if ($('#country-select option:selected').val() == 'Slovakia') {
+                        newLocation(48.668859, 18.5786351);
+                        map.setZoom(5);
+                    }
+                    if ($('#country-select option:selected').val() == 'France') {
+                        newLocation(46.1390888, 2.4336308);
+                        map.setZoom(5);
+                    }
+    
+                });
+            }
+    
+        }
+        
+       
+        google.maps.event.addDomListener(window, 'load', initMap)
+    
+    </script>
+</body>
+<script src='./js/jquery.js'></script>
+<script src='./js/bootstrap.min.js'></script>
+<script src='./js/slick.min.js'></script>
+<script src='./js/aos.js'></script>
+<script src='./js/swiper-bundle.min.js'></script>
+<script src='./js/jquery.nice-select.min.js'></script>
+<script src='./js/main.js'></script>
+
+
+</html>

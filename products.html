@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/aos.css">
+    <!-- <link rel="stylesheet" href="./css/swiper-bundle.css"> -->
+    <link rel="icon" href="./img/favicon.png" sizes="32x32" />
+    <link rel="stylesheet" href="./css/nice-select.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApj8qSzyO4DqXeQtFQPKI4mi6p-MBwlpo&libraries=places"></script>
+    <title>AvaTech</title>
+</head>
+<body class="products-page">
+    <header class="header__wrapper">
+        <div class="header">
+            <div class="container">
+                <div class="header_row ">
+                    
+                    <div class="header__logo">
+                        <a href="index.html">
+                            <img class="logo-big" src="./img/logo_icon.svg" alt="logo">
+                            <img class="logo-small" src="./img/logo_small.svg" alt="logo">
+                        </a>
+                    </div>
+                
+                    <div class=" header__menu-wrap">
+                        <div class="header__menu">
+                            <ul>
+                                <li >
+                                    <a href="about.html">О компании</a>
+                                </li>
+                                <li >
+                                    <a href="solutions.html">Решения</a>
+                                </li>
+                                <li class="current-menu-item ">
+                                    <a href="products.html">Продукты</a>
+                                </li>
+                                <li>
+                                    <a href="contacts.html">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header__soc_mob">
+                            <a href="#">
+                                <img src="./img/Icon_youtube.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_inst.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_fb.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_in.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="header__lang_mob">
+                            <ul>
+                                <li class="current-lang">
+                                    <a href="#">RU</a>
+                                </li>
+                                <li>
+                                    <a href="#">UA</a>
+                                </li>
+                                <li>
+                                    <a href="#">EN</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="header__phone">
+                        <span>Связаться с нами</span>
+                        <img src="./img/phone_w.svg" alt="">
+                    </div>
+                    <div class="header__soc">
+                        <a href="#">
+                            <img src="./img/Icon_youtube.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="./img/Icon_inst.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="./img/Icon_fb.svg" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="./img/Icon_in.svg" alt="">
+                        </a>
+                    </div>
+                    <div class="header__lang">
+                        <ul>
+                            <li class="current-lang">
+                                <a href="#">RU</a>
+                            </li>
+                            <li>
+                                <a href="#">UA</a>
+                            </li>
+                            <li>
+                                <a href="#">EN</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="burger-menu ">
+                        <img class="burger-menu_open" src="./img/burger.svg" alt="">
+                        <img class="burger-menu_close" src="./img/close.svg" alt="">
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="about-intro">
+            <div class="about-intro__slider">
+                <div class="about-intro-slider">
+                    <div class="about-intro-slide">
+                        <img src="./img/prod-slide_1.jpg" alt="">
+                    </div>
+                    <div class="about-intro-slide">
+                        <img src="./img/prod-slide_2.jpg" alt="">
+                    </div>
+                    <div class="about-intro-slide">
+                        <img src="./img/prod-slide_3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="about-intro__container">
+                <div class="container">
+                    <div class="about-intro__title">
+                        <h1>Продукты</h1>
+                        <div class="about-intro__subtitle">
+                            Lorem ipsum dolor sit amet, consectetur <br> adipiscing elit
+                        </div>
+                    </div>
+                    <div class="slick-navigation"></div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <div class="breadcrumbs">
+                <span>
+                    <a href="index.html">Главная</a>
+                </span>
+                —
+                <span>
+                    Продукты
+                </span>
+            </div>
+        </div>
+
+        <section class="products">
+            <div class="container">
+                
+                <div class="products__filter">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-6 col-xl-3  col-md-6">
+                                <div class="check-box__wrapper">
+                                    <div class="check-box__title">
+                                        Область приминения
+                                    </div>
+                                    <div class="check-box__list">
+                                        <div class="check-box-item">
+                                            <input type="checkbox" id="application_area_1" >
+                                            <label class="check-box-item__label" for="application_area_1">FOOD - ЗОНА </label>
+                                        </div>
+                                        <div class="check-box-item">
+                                            <input type="checkbox" id="application_area_2" >
+                                            <label class="check-box-item__label" for="application_area_2">STYLE - ЗОНА</label>
+                                        </div>
+                                        <div class="check-box-item">
+                                            <input type="checkbox" id="application_area_3" >
+                                            <label class="check-box-item__label" for="application_area_3">WORK - ЗОНА</label>
+                                        </div>
+                                        <div class="check-box-item">
+                                            <input type="checkbox" id="application_area_4" >
+                                            <label class="check-box-item__label" for="application_area_4">WORK - ЗОНА</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <select class="nice__select" name="" >
+                                    <option value="">Область приминения</option>
+                                    <option value="">Область приминения</option>
+                                    <option value="">Область приминения</option>
+                                    <option value="">Область приминения</option>
+                                </select> -->
+                            </div>
+                            <div class="col-lg-6 col-xl-3 col-md-6">
+                                <!-- <select class="nice__select" name="" id="">
+                                    <option value="">Тип</option>
+                                    <option value="">Тип</option>
+                                    <option value="">Тип</option>
+                                    <option value="">Тип</option>
+                                </select> -->
+                                <div class="check-box__wrapper">
+                                    <div class="check-box__title">
+                                        Тип
+                                    </div>
+                                    <div class="check-box__list">
+                                        <div class="check-box-item">
+                                            <input type="checkbox" id="type_1" name="type" >
+                                            <label class="check-box-item__label" for="type_1">Вбудовані</label>
+                                        </div>
+                                        <div class="check-box-item">
+                                            <input type="checkbox" id="type_2" name="type" >
+                                            <label class="check-box-item__label" for="type_2">Зовнішні</label>
+                                        </div>
+                                        <div class="check-box-item">
+                                            <input type="checkbox" id="type_3" name="type" >
+                                            <label class="check-box-item__label" for="type_3">Лінійні</label>
+                                        </div>
+                                        <div class="check-box-item">
+                                            <input type="checkbox" id="type_4" name="type" >
+                                            <label class="check-box-item__label" for="type_4">Підвісні</label>
+                                        </div>
+                                        <div class="check-box-item">
+                                            <input type="checkbox" id="type_5" name="type" >
+                                            <label class="check-box-item__label" for="type_5">Трекові системи</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="products__items">
+                    <div class="row">
+                        <div class="col-lg-3 col-6">
+                            <a href="single-product.html" class="product">
+                                <div class="product__img">
+                                    <img src="./img/roduct1.png" alt="">
+                                </div>
+                                <div class="product__name">Jazz</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="single-product.html" class="product">
+                                <div class="product__img">
+                                    <img src="./img/roduct2.png" alt="">
+                                </div>
+                                <div class="product__name">Komo</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="single-product.html" class="product">
+                                <div class="product__img">
+                                    <img src="./img/roduct3.png" alt="">
+                                </div>
+                                <div class="product__name">Cube</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="single-product.html" class="product">
+                                <div class="product__img">
+                                    <img src="./img/roduct4.png" alt="">
+                                </div>
+                                <div class="product__name">Duo</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="#" class="product">
+                                <div class="product__img">
+                                    <img src="./img/roduct3.png" alt="">
+                                </div>
+                                <div class="product__name">Jazz</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="#" class="product">
+                                <div class="product__img">
+                                    <img src="./img/roduct1.png" alt="">
+                                </div>
+                                <div class="product__name">Komo</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="#" class="product">
+                                <div class="product__img">
+                                    <img src="./img/roduct2.png" alt="">
+                                </div>
+                                <div class="product__name">Cube</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="#" class="product">
+                                <div class="product__img">
+                                    <img src="./img/roduct1.png" alt="">
+                                </div>
+                                <div class="product__name">Duo</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="#" class="product">
+                                <div class="product__img">
+                                    <img src="./img/roduct4.png" alt="">
+                                </div>
+                                <div class="product__name">Jazz</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="#" class="product">
+                                <div class="product__img">
+                                    <img src="./img/roduct3.png" alt="">
+                                </div>
+                                <div class="product__name">Komo</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="#" class="product">
+                                <div class="product__img">
+                                    <img src="./img/roduct1.png" alt="">
+                                </div>
+                                <div class="product__name">Cube</div>
+                            </a>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                            <a href="#" class="product">
+                                <div class="product__img">
+                                    <img src="./img/roduct2.png" alt="">
+                                </div>
+                                <div class="product__name">Duo</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </section>
+
+        <section class="text-block">
+            <div class="container">
+                <div class="text-block__title">LOREM IPSUM DOLOR SIT AMET</div>
+                <div class="text-block__content">
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type 
+                        specimen book. It has survived not only five centuries, but also the leap into 
+                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                        and more recently with desktop publishing software like Aldus PageMaker 
+                        including versions of Lorem Ipsum.
+                    </p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type 
+                        specimen book. It has survived not only five centuries, but also the leap into 
+                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                        and more recently with desktop publishing software like Aldus PageMaker 
+                        including versions of Lorem Ipsum.
+                    </p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type 
+                        specimen book. It has survived not only five centuries, but also the leap into 
+                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                        and more recently with desktop publishing software like Aldus PageMaker 
+                        including versions of Lorem Ipsum.
+                    </p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type 
+                        specimen book. It has survived not only five centuries, but also the leap into 
+                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                        and more recently with desktop publishing software like Aldus PageMaker 
+                        including versions of Lorem Ipsum.
+                    </p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type 
+                        specimen book. It has survived not only five centuries, but also the leap into 
+                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                        and more recently with desktop publishing software like Aldus PageMaker 
+                        including versions of Lorem Ipsum.
+                    </p>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type 
+                        specimen book. It has survived not only five centuries, but also the leap into 
+                        electronic typesetting, remaining essentially unchanged. It was popularised in
+                        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                        and more recently with desktop publishing software like Aldus PageMaker 
+                        including versions of Lorem Ipsum.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+     
+    </main>
+    <footer class="footer">
+        <div class="top-btn">
+            <svg width="20" height="11" viewBox="0 0 20 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 10L10 1L19 10" stroke="white" stroke-linecap="square"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="footer__logo">
+                        <a href="#">
+                            <img src="./img/logo.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <div class="footer__menu">
+                        <ul>
+                            <li>
+                                <a href="#">О компании</a>
+                            </li>
+                            <li>
+                                <a href="#">Решения</a>
+                            </li>
+                            <li>
+                                <a href="#">Продукты</a>
+                            </li>
+                            <li>
+                                <a href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="footer__contacts">
+                        <div class="footer__select">
+                            <select class="nice__select" name="" id="contacts_select">
+                                <option value="ukr">УКРАИНА</option>
+                                <option value="de">НІМЕЧЧИНА</option>
+                                <option value="bl">БІЛОРУСЬ</option>
+                            </select>
+                        </div>
+                        <div class="footer__contact-list active" data-list='ukr'>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__contact-list" data-list='de'>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                         Sophie-Christ. Str 4 Mainz, 55127, Germany
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__contact-list" data-list='bl'>
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        м. Гомель, вул. Базова, б. 6
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="contact-list">
+                                <p class="contact-list__title">Адрес:</p>
+                                <ul >
+                                    <li>
+                                        ул. Вацлава Гавела 4,Киев, Украина, 02000
+                                    </li>
+                                </ul>
+                                <p class="contact-list__title">Номер телефона:</p>
+                                <ul>
+                                    <li>+38 (044) 351 19 99</li>
+                                </ul>
+                                <p class="contact-list__title">Почта:</p>
+                                <ul>
+                                    <li>info@ava-tech.com.ua</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer__soc">
+                        <div class="footer__btn">
+                            <a href="#" class="btn btn_black">Обратный звонок</a>
+                        </div>
+                        <div class="footer__icons">
+                            <a href="#">
+                                <img src="./img/Icon_youtube.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_inst.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_fb.svg" alt="">
+                            </a>
+                            <a href="#">
+                                <img src="./img/Icon_in.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__copy">
+                <span>Copyright Ava Tech 2021</span>
+                <a href="#">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+<script src='./js/jquery.js'></script>
+<script src='./js/bootstrap.min.js'></script>
+<script src='./js/slick.min.js'></script>
+<script src='./js/aos.js'></script>
+<script src='./js/swiper-bundle.min.js'></script>
+<script src='./js/jquery.nice-select.min.js'></script>
+<script src='./js/main.js'></script>
+
+
+</html>
